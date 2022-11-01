@@ -39,5 +39,5 @@ public:
 signed main() 
 {
 	Maha m;
-    return 0;
+        return 0;
 }
