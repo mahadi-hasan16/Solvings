@@ -26,12 +26,9 @@ public:
         {
             int n,x,power=0,ans=0;
             cin>>n;
-            int a[n];
-            for(i=0;i<n;i++)
-                cin>>a[i];
             for(i=0;i<n;i++)
             {
-                x=a[i];
+                cin>>x;
                 while(x%2==0)
                 {
                     x/=2;
@@ -51,9 +48,6 @@ public:
                     arr[i]=(n/pow(2,i+1))-sum;
                     sum+=arr[i];
                 }
-                // for(i=x-1;i>=0;i--)
-                //     cout<<arr[i]<<" "<<i+1<<nl;
-                // cout<<nl;
                 for(i=x-1;i>=0 and power<n;i--)
                 {
                     for(j=1;j<=arr[i] and power<n;j++)
