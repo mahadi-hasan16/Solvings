@@ -29,6 +29,7 @@ public:
         while((x/h)*(x/w)<n)
             x*=2;
         r=x;
+        l=(x/2);
         while(r-l>1)
         {
             mid=l+(r-l)/2;
