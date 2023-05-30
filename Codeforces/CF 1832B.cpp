@@ -26,16 +26,15 @@ public:
         {
             int i,n,k,l,r;
             cin>>n>>k;
-            ll a[n],b[n]={0},sum=0;
+            ll a[n],sum=0;
             for(i=0;i<n;i++)
                 cin>>a[i];
             sort(a,a+n);
-            b[0]=a[0];
             for(i=1;i<n;i++)
-                b[i]+=b[i-1]+a[i];
+                a[i]+=a[i-1];
             for(i=0;i<k;i++)
-                sum=max(sum,b[n-i-1]-b[2*(k-i)-1]);
-            cout<<max(sum,b[n-k-1])<<nl;
+                sum=max(sum,a[n-i-1]-a[2*(k-i)-1]);
+            cout<<max(sum,a[n-k-1])<<nl;
         }
     }
 };
