@@ -38,23 +38,24 @@ public:
                 cout<<"YES\n";
                 continue;
             }
+            bool k=0;
             for(i=0;i<n;i++)
             {
-                if((x&a[i])+(x^a[i])==x)
+                if((x&a[i])==a[i])
                     u|=a[i];
                 else
                     break;
             }
             for(i=0;i<n;i++)
             {
-                if((x&b[i])+(x^b[i])==x)
+                if((x&b[i])==b[i])
                     u|=b[i];
                 else
                     break;
             }
             for(i=0;i<n;i++)
             {
-                if((x&c[i])+(x^c[i])==x)
+                if((x&c[i])==c[i])
                     u|=c[i];
                 else
                     break;
