@@ -8,7 +8,7 @@ Noakhali Science and Technology University (NSTU).
 #define eb emplace_back
 #define mp make_pair
 #define pi acos(-1)
-#define lcm(a,b) (a*b)/__gcd(a,b)
+#define lcm(a,b) ((a*b)/__gcd(a,b))
 #define all(v) v.begin(),v.end()
 #define w(x) long long x;scanf("%lld",&x);while(x--)
 #define ios ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
@@ -27,8 +27,7 @@ public:
         {
             ll n,x,y; 
             cin>>n>>x>>y;
-            ll g=x*y/__gcd(x,y);
-            ll p= n/g; 
+            ll p= n/lcm(x,y); 
             ll r=(n/x)-p; 
             ll b=(n/y)-p;
             ll ans=((r*(2*n-r+1))-(b*(2+b-1)))/2;
