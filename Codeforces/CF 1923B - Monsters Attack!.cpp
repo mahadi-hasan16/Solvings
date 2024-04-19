@@ -30,8 +30,8 @@ public:
             ll a[n],x[n+1]={0}, m;
             for(i=0;i<n;i++)
                 cin>>a[i];
-            ll d=0;
-            bool ans=0;
+            bool d=0;
+            ll sum=0;
             for(i=0;i<n;i++)
             {
                 cin>>m;
@@ -39,11 +39,11 @@ public:
             }
             for(i=1;i<n+1;i++)
             {
-                d+=k-x[i];
-                if(d<0)
-                    ans=1;
+                sum+=x[i];
+                if(i*k<sum)
+                    d=1;
             }
-            if(ans)
+            if(d)
                 cout<<"NO\n";
             else
                 cout<<"YES\n";
