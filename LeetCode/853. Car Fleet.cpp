@@ -5,7 +5,7 @@ public:
         vector<double> duration;
         int i;
         for(i = 0; i < position.size(); i++) {
-            mp[position[i]] = 1.0 * (target - position[i]) / speed[i]; // Fixed calculation
+            mp[position[i]] = 1.0 * (target - position[i]) / speed[i]; 
         }
 
         for(auto it = mp.begin(); it != mp.end(); it++) {
@@ -13,10 +13,10 @@ public:
         }
 
         int fleet = 0;
-        double prev = 0; // Use double to match the precision of duration
+        double prev = 0; 
 
         for(i = duration.size()-1; i >= 0; i--) {
-            if(duration[i] > prev) { // Correct condition
+            if(duration[i] > prev) { 
                 fleet++;
                 prev = duration[i];
             }
