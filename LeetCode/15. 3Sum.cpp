@@ -13,6 +13,7 @@ public:
 
             while(l < r) {
                 int sum = nums[i] + nums[l] + nums[r];
+                
                 if(sum == 0) {
                     result.push_back({nums[i], nums[l], nums[r]});
                     
